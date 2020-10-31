@@ -2,7 +2,7 @@ import java.lang.NullPointerException
 import java.lang.NumberFormatException
 
 fun main() {
-    var str:String? = "Przemysław"
+    var str:String? = "Dawid"
 
     println("Długość napisu: ${str?.length}")
     println("Długość napisu: ${str!!.length}")
@@ -44,7 +44,7 @@ fun example1(){
     }
 
     if(true)
-        name = null  
+        name = null
     else
         name = "Przemysław 1"
 
