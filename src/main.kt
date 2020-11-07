@@ -1,5 +1,4 @@
 import java.lang.NullPointerException
-import java.lang.NumberFormatException
 
 fun main() {
     var str:String? = "Dawid"
@@ -32,6 +31,7 @@ fun main() {
     }
 
     example1()
+    example1a()
 }
 
 fun example1(){
@@ -53,4 +53,31 @@ fun example1(){
     }.also {
         println("To część bloku also")
     }
+}
+
+fun example1a(){
+    var str1:String? = "Kolodziej"
+    println("Długość napisu ${str1?.length}")
+
+    str1?.let {
+        println("Długość napisu ${it.length}")
+    }
+
+    if(true)
+        str1 = null
+
+    try {
+        println("Długość napisu ${str1!!.length}")
+    }catch(e: NullPointerException){
+        println("Napis zawiera null")
+    }
+
+    println("Długość napisu ${str1?.length}")
+
+    val tab:Array<Int?> = arrayOf(1,2,3,4,5,null,null)
+    val tab1 = tab.filterNotNull()
+
+    println(tab.asList())
+    println(tab1)
+
 }
