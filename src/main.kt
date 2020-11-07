@@ -35,7 +35,7 @@ fun main() {
 }
 
 fun example1(){
-    var name:String? = "Przemysław"
+    var name:String? = "Dawid"
 
     name?.let{
         println("Wartość wynosi: ${it}")
@@ -46,7 +46,7 @@ fun example1(){
     if(true)
         name = null
     else
-        name = "Przemysław 1"
+        name = "Dawid 1"
 
     name?.let{
         println("Wartość wynosi: ${it}")
